@@ -22,6 +22,6 @@ The MQTT Access Log is a very useful HiveMQ Plugin for debugging and development
 . Copy the jar file to your +<HIVEMQ_HOME>/plugins+ folder
 . Run HiveMQ
 . Connect with a {hivemq-blog-tools}[MQTT client] of your choice and publish something.
-. Check the log file <HiveMQ Home>/log/hivemq-access.<TIMESTAMP>.log
+. Check the log file +<HiveMQ Home>/log/hivemq-access.<TIMESTAMP>.log+
 
 
