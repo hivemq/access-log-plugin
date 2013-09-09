@@ -29,7 +29,7 @@ import org.apache.commons.configuration.AbstractConfiguration;
  * @author Dominik Obermaier
  * @author Christian Goetz
  */
-@Information(name = "Access Log Plugin", version = "1.1")
+@Information(name = "Access Log Plugin", version = "1.1", author = "dc-square GmbH", description = "This plugin logs all main MQTT command messages retrieved from clients into a file in the log directory.")
 public class AccessLogModule extends HiveMQPluginModule {
 
     @Override
