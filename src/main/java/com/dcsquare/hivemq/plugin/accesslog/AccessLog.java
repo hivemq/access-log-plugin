@@ -29,6 +29,7 @@ import com.dcsquare.hivemq.spi.message.SUBSCRIBE;
 import com.dcsquare.hivemq.spi.message.UNSUBSCRIBE;
 import com.dcsquare.hivemq.spi.security.ClientData;
 import com.dcsquare.hivemq.spi.util.PathUtils;
+import com.google.common.base.Charsets;
 import org.pmw.tinylog.Configurator;
 import org.pmw.tinylog.Logger;
 import org.pmw.tinylog.LoggingLevel;
@@ -40,7 +41,6 @@ import org.slf4j.LoggerFactory;
 import javax.inject.Inject;
 import java.io.File;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 
 /**
@@ -98,12 +98,7 @@ public class AccessLog extends PluginEntryPoint {
 
             @Override
             public void onPublishReceived(PUBLISH publish, ClientData clientData) throws OnPublishReceivedException {
-                String s = null;
-                try {
-                    s = new String(publish.getPayload(), "UTF-8");
-                } catch (UnsupportedEncodingException e) {
-                    e.printStackTrace();
-                }
+                String s = new String(publish.getPayload(), Charsets.UTF_8);
                 Logger.info("{0} PUBLISHED MESSAGE TO {1} PAYLOAD: {2}", clientData.getClientId(), publish.getTopic(), s);
             }
 
@@ -162,8 +157,6 @@ public class AccessLog extends PluginEntryPoint {
             public int priority() {
                 return CallbackPriority.MEDIUM;
             }
-
-
         };
     }
 }
