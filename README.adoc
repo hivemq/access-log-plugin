@@ -4,6 +4,8 @@
 
 = MQTT Accesslog Plugin
 
+IMPORTANT: This Plugin is not maintained anymore and you should use the link:https://github.com/hivemq/mqtt-message-log[MQTT Message Log Plugin instead]
+
 == Description
 
 The MQTT Access Log is a very useful HiveMQ Plugin for debugging and development purposes. It provides the possibility to follow up on any clients communicating with the broker.
