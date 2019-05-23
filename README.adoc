@@ -27,3 +27,11 @@ The MQTT Access Log is a very useful HiveMQ Plugin for debugging and development
 . Check the log file +<HiveMQ Home>/log/hivemq-access.<TIMESTAMP>.log+
 
 
+= Contributing
+
+If you want to contribute to HiveMQ Access Log Plugin, see the link:CONTRIBUTING.md[contribution guidelines].
+
+= License
+
+HiveMQ Access Log Plugin is licensed under the `APACHE LICENSE, VERSION 2.0`. A copy of the license can be found link:LICENSE.txt[here].
+
